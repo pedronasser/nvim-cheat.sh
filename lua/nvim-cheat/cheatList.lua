@@ -66,9 +66,9 @@ function M:new_cheat_list(disable_comment, init_text)
   local cmd
   init_text = init_text:gsub(' ', '')
   if init_text == '' then
-    cmd = 'curl cht.sh/:list'
+    cmd = 'curl localhost:8002/:list'
   else
-    cmd = string.format('curl cht.sh/%s/:list', init_text)
+    cmd = string.format('curl localhost:8002/%s/:list', init_text)
   end
   opts.data = {
     cmd = cmd
